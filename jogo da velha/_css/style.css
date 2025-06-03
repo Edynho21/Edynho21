@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#status {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* 3 colunas de 100px */
+    grid-template-rows: repeat(3, 100px);    /* 3 linhas de 100px */
+    gap: 5px;
+    width: 315px; /* 3*100px + 2*5px de gap */
+    height: 315px;
+    margin: 0 auto 30px;
+    border: 2px solid #333;
+    background-color: #333; /* Cor do gap */
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    color: #333;
+}
+
+.cell:hover {
+    background-color: #ddd;
+}
+
+.cell.x {
+    color: #e74c3c; /* Vermelho para X */
+}
+
+.cell.o {
+    color: #3498db; /* Azul para O */
+}
+
+#restartButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#restartButton:hover {
+    background-color: #218838;
+}
